@@ -999,8 +999,14 @@ function App() {
   }
 
   const handleNext = () => {
-    setCurrentIndex(Math.floor(Math.random() * terms.length))
-    setFlipped(false)
+    if(flipped) {
+      setFlipped(false)
+      setTimeout(() => {
+        setCurrentIndex(Math.floor(Math.random() * terms.length))
+      }, 600) // 600 ms to match "transition: transform 0.6s;" in the FlipCard styling
+    } else {
+      setCurrentIndex(Math.floor(Math.random() * terms.length))
+    }
   }
 
   const currentTerm = terms[currentIndex]

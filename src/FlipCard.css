@@ -33,12 +33,21 @@
   }
   
   .card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
     transform: rotateY(180deg);
+  }
+  
+  .card-back h2 {
+    margin: 0;
   }
   
   .next-button {
     padding: 10px 20px;
-    background-color: #f97316; /* Tailwind orange-500 */
+    background-color: #f97316;
     color: white;
     border: none;
     border-radius: 4px;
@@ -48,5 +57,5 @@
   }
   
   .next-button:hover {
-    background-color: #ea580c; /* Tailwind orange-600 */
+    background-color: #ea580c;
   }
